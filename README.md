@@ -1,2 +1,587 @@
 # For-fang
 阳光聚散，我们不多说
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title> seize your life</title>
+    <meta name="author" content="方家卫>
+    <meta name=" copyright " content="方家卫 ">
+    <meta name="format-detection " content="telephone=no ">
+    <meta name="theme-color " content="#ffffff ">
+    <meta http-equiv="Cache-Control " content="no-transform ">
+    <meta http-equiv="Cache-Control " content="no-siteapp ">
+    <meta property="og:type " content="website ">
+    <meta property="og:title " content="方家卫 ">
+    <meta property="og:url " content="https://shenshenbuxi.com/index.html ">
+    <meta property="og:site_name " content="方家卫 ">
+    <meta property="og:locale " content="zh_CN ">
+    <meta property="og:image " content="https://shenshenbuxi.com/img/avatar.png ">
+    <meta property="article:author " content="方家卫 ">
+    <meta name="twitter:card " content="summary ">
+    <meta name="twitter:image " content="https://shenshenbuxi.com/img/avatar.png ">
+    <link rel="shortcut icon " href="/img/favicon.png ">
+    <link rel="canonical " href="https://shenshenbuxi.com/ ">
+    <link rel="preconnect " href="//cdn.jsdelivr.net " />
+    <link rel="preconnect " href="//busuanzi.ibruce.info " />
+    <link rel="preconnect " href="//zz.bdstatic.com " />
+    <link rel="stylesheet " href="/css/index.css ">
+    <link rel="stylesheet " href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css ">
+    <link rel="stylesheet " href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css ">
+    <link rel="stylesheet " href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css ">
+    <script>
+        var GLOBAL_CONFIG = {
+            root: '/',
+            hexoversion: '5.2.0',
+            algolia: undefined,
+            localSearch: undefined,
+            translate: undefined,
+            noticeOutdate: undefined,
+            highlight: {
+                "plugin ": "highlighjs ",
+                "highlightCopy ": true,
+                "highlightLang ": true
+            },
+            copy: {
+                success: '复制成功',
+                error: '复制错误',
+                noSupport: '浏览器不支持'
+            },
+            relativeDate: {
+                homepage: false,
+                post: false
+            },
+            runtime: '天',
+            date_suffix: {
+                just: '刚刚',
+                min: '分钟前',
+                hour: '小时前',
+                day: '天前',
+                month: '个月前'
+            },
+            copyright: undefined,
+            ClickShowText: {
+                "text ": "方家卫 ",
+                "fontSize ": "6px "
+            },
+            lightbox: 'fancybox',
+            Snackbar: {
+                "chs_to_cht ": "你已切换为繁体 ",
+                "cht_to_chs ": "你已切换为简体 ",
+                "day_to_night ": "你已切换为深色模式 ",
+                "night_to_day ": "你已切换为浅色模式 ",
+                "bgLight ": "#49b1f5 ",
+                "bgDark ": "#121212 ",
+                "position ": "top-center "
+            },
+            justifiedGallery: {
+                js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+                css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+            },
+            isPhotoFigcaption: false,
+            islazyload: false,
+            isanchor: false
+        };
+
+        var saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay,
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        }
+    </script>
+    <script id="config_change ">
+        var GLOBAL_CONFIG_SITE = {
+            isPost: false,
+            isHome: true,
+            isHighlightShrink: false,
+            isSidebar: false,
+            postUpdate: '2020-11-01 21:27:44'
+        }
+    </script><noscript><style type="text/css ">
+      #nav {
+        opacity: 1
+      }
+      .justified-gallery img {
+        opacity: 1
+      }
+    
+      #recent-posts time,
+      #post-meta time {
+        display: inline !important
+      }
+    </style></noscript>
+    <script>
+        (function() {
+            window.activateDarkMode = function() {
+                document.documentElement.setAttribute('data-theme', 'dark')
+                if (document.querySelector('meta[name="theme-color "]') !== null) {
+                    document.querySelector('meta[name="theme-color "]').setAttribute('content', '#0d0d0d')
+                }
+            }
+            window.activateLightMode = function() {
+                document.documentElement.setAttribute('data-theme', 'light')
+                if (document.querySelector('meta[name="theme-color "]') !== null) {
+                    document.querySelector('meta[name="theme-color "]').setAttribute('content', '#ffffff')
+                }
+            }
+
+            const autoChangeMode = 'false'
+            const t = saveToLocal.get('theme')
+            if (autoChangeMode === '1') {
+                const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+                const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+                const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+                const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+                if (t === undefined) {
+                    if (isLightMode) activateLightMode()
+                    else if (isDarkMode) activateDarkMode()
+                    else if (isNotSpecified || hasNoSupport) {
+                        const now = new Date()
+                        const hour = now.getHours()
+                        const isNight = hour <= 6 || hour >= 18
+                        isNight ? activateDarkMode() : activateLightMode()
+                    }
+                    window.matchMedia('(prefers-color-scheme: dark)').addListener(function(e) {
+                        if (saveToLocal.get('theme') === undefined) {
+                            e.matches ? activateDarkMode() : activateLightMode()
+                        }
+                    })
+                } else if (t === 'light') activateLightMode()
+                else activateDarkMode()
+            } else if (autoChangeMode === '2') {
+                const now = new Date()
+                const hour = now.getHours()
+                const isNight = hour <= 6 || hour >= 18
+                if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+                else if (t === 'light') activateLightMode()
+                else activateDarkMode()
+            } else {
+                if (t === 'dark') activateDarkMode()
+                else if (t === 'light') activateLightMode()
+            }
+        })()
+    </script>
+    <meta name="generator " content="Hexo 5.2.0 ">
+    <link rel="alternate " href="/atom.xml " title="申申不嘻 " type="application/atom+xml ">
+</head>
+
+<body>
+    <div id="mobile-sidebar ">
+        <div id="menu_mask "></div>
+        <div id="mobile-sidebar-menus ">
+            <div class="mobile_author_icon "><img class="avatar-img " src="/img/avatar.png " onerror="onerror=null;src='/img/friend_404.gif' " alt="avatar " /></div>
+            <div class="mobile_post_data ">
+                <div class="mobile_data_item is-center ">
+                    <div class="mobile_data_link ">
+                        <a href="/archives/ ">
+                            <div class="headline ">文章</div>
+                            <div class="length_num ">5</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="mobile_data_item is-center ">
+                    <div class="mobile_data_link ">
+                        <a href="/tags/ ">
+                            <div class="headline ">标签</div>
+                            <div class="length_num ">6</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="mobile_data_item is-center ">
+                    <div class="mobile_data_link ">
+                        <a href="/categories/ ">
+                            <div class="headline ">分类</div>
+                            <div class="length_num ">4</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <div class="menus_items ">
+                <div class="menus_item "><a class="site-page " href="/ "><i class="fa-fw fas fa-home "></i><span> 主页</span></a></div>
+                <div class="menus_item "><a class="site-page " href="/archives/ "><i class="fa-fw fas fa-archive "></i><span> 时间轴</span></a></div>
+                <div class="menus_item "><a class="site-page " href="/tags/ "><i class="fa-fw fas fa-tags "></i><span> 标签</span></a></div>
+                <div class="menus_item "><a class="site-page " href="/categories/ "><i class="fa-fw fas fa-folder-open "></i><span> 分类</span></a></div>
+                <div class="menus_item "><a class="site-page " href="javascript:void(0); "><i class="fa-fw fas fa-list "></i><span> 清单</span><i class="fas fa-chevron-down expand hide "></i></a>
+                    <ul class="menus_item_child ">
+                        <li><a class="site-page " href="/movies/ "><i class="fa-fw fas fa-video "></i><span> 电影</span></a></li>
+                        <li><a class="site-page " href="/books/ "><i class="fa-fw fas fa-book "></i><span> 书籍</span></a></li>
+                    </ul>
+                </div>
+                <div class="menus_item "><a class="site-page " href="/link/ "><i class="fa-fw fas fa-link "></i><span> 友链</span></a></div>
+                <div class="menus_item "><a class="site-page " href="/about/ "><i class="fa-fw fas fa-heart "></i><span> 关于</span></a></div>
+            </div>
+        </div>
+    </div>
+    <div id="body-wrap ">
+        <header class="full_page " id="page-header " style="background-image: url(https://s1.ax1x.com/2020/10/10/0sIQyT.jpg) ">
+            <nav id="nav "><span id="blog_name "><a id="site-name " href="/ ">申申不嘻</a></span><span id="menus "><div class="menus_items "><div class="menus_item "><a class="site-page " href="/ "><i class="fa-fw fas fa-home "></i><span> 主页</span></a>
+    </div>
+    <div class="menus_item "><a class="site-page " href="/archives/ "><i class="fa-fw fas fa-archive "></i><span> 时间轴</span></a></div>
+    <div class="menus_item "><a class="site-page " href="/tags/ "><i class="fa-fw fas fa-tags "></i><span> 标签</span></a></div>
+    <div class="menus_item "><a class="site-page " href="/categories/ "><i class="fa-fw fas fa-folder-open "></i><span> 分类</span></a></div>
+    <div class="menus_item "><a class="site-page " href="javascript:void(0); "><i class="fa-fw fas fa-list "></i><span> 清单</span><i class="fas fa-chevron-down expand hide "></i></a>
+        <ul class="menus_item_child ">
+            <li><a class="site-page " href="/movies/ "><i class="fa-fw fas fa-video "></i><span> 电影</span></a></li>
+            <li><a class="site-page " href="/books/ "><i class="fa-fw fas fa-book "></i><span> 书籍</span></a></li>
+        </ul>
+    </div>
+    <div class="menus_item "><a class="site-page " href="/link/ "><i class="fa-fw fas fa-link "></i><span> 友链</span></a></div>
+    <div class="menus_item "><a class="site-page " href="/about/ "><i class="fa-fw fas fa-heart "></i><span> 关于</span></a></div>
+    </div><span class="close " id="toggle-menu "><a class="site-page "><i class="fas fa-bars fa-fw "></i></a></span></span>
+    </nav>
+    <div id="site-info ">
+        <h1 id="site-title ">申申不嘻</h1>
+        <div id="site-subtitle "><span id="subtitle "></span></div>
+        <div id="site_social_icons "><a class="social-icon " href="https://github.com/shenshenbuxi/shenshenbuxi.github.io/ " target="_blank " title="Github "><i class="fab fa-github "></i></a><a class="social-icon " href="mailto:656629253@qq.com
+        " target="_blank " title="Email "><i class="fas fa-envelope "></i></a></div>
+    </div>
+    <div id="scroll-down "><i class="fas fa-angle-down scroll-down-effects "></i></div>
+    </header>
+    <main class="layout_page " id="content-inner ">
+        <div class="recent-posts " id="recent-posts ">
+            <div class="recent-post-item ">
+                <div class="post_cover left_radius ">
+                    <a href="/2020/10/24/gongjuheji/ " title="上百款实用工具等你发现 "> <img class="post_bg " src="https://s1.ax1x.com/2020/10/10/0sINf1.jpg " onerror="this.onerror=null;this.src='/img/404.jpg' " alt="上百款实用工具等你发现 "></a>
+                </div>
+                <div class="recent-post-info "><a class="article-title " href="/2020/10/24/gongjuheji/ " title="上百款实用工具等你发现 ">上百款实用工具等你发现</a>
+                    <div class="article-meta-wrap "><span class="post-meta-date "><i class="far fa-calendar-alt "></i><span class="article-meta-label ">发表于</span><time datetime="2020-10-24T08:16:57.000Z " title="发表于 2020-10-24 16:16:57
+        ">2020-10-24</time></span><span class="article-meta "><span class="article-meta__separator ">|</span>
+                        <i class="fas fa-inbox article-meta__icon "></i><a class="article-meta__categories " href="/categories/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/ ">实用工具</a></span>
+                    </div>
+                    <div class="content ">压缩图片，二维码制作，视频提取音频，网页源码获取……你需要的，这里都有！&gt;精准云工具合集&gt;兔2工具合集&gt;爱资料工具&gt;工具导航&gt;资料6 点击上方文字或复制链接到浏览器即可使用精准云工具合集1https:&#x2F;&#x2F;jingzhunyun.com&#x2F; 兔2工具合集1https:&#x2F;&#x2F;www.tool2.cn&#x2F; 爱资料工具1http:&#x2F;&#x2F;www.toolnb.com
+                        工具导航1https:&#x2F;&#x2F;hao.logosc.cn&#x2F; 资料61http:&#x2F;&#x2F;www.ziliao6.com&#x2F; More info: shenshenbuxi 文章中出现的商标及图像版权属于其合法持有人，只供传递信息之用，非商务用途。互动交流时请遵守理性，宽容，换位思考的原则。
+                    </div>
+                </div>
+            </div>
+            <div class="recent-post-item ">
+                <div class="post_cover right_radius ">
+                    <a href="/2020/10/24/liulanqizhuye/ " title="追求极简精美主页 "> <img class="post_bg " src="https://s1.ax1x.com/2020/10/10/0sI8w4.jpg " onerror="this.onerror=null;this.src='/img/404.jpg' " alt="追求极简精美主页 "></a>
+                </div>
+                <div class="recent-post-info "><a class="article-title " href="/2020/10/24/liulanqizhuye/ " title="追求极简精美主页 ">追求极简精美主页</a>
+                    <div class="article-meta-wrap "><span class="post-meta-date "><i class="far fa-calendar-alt "></i><span class="article-meta-label ">发表于</span><time datetime="2020-10-24T08:16:57.000Z " title="发表于 2020-10-24 16:16:57
+        ">2020-10-24</time></span><span class="article-meta "><span class="article-meta__separator ">|</span>
+                        <i class="fas fa-inbox article-meta__icon "></i><a class="article-meta__categories " href="/categories/%E7%B2%BE%E7%BE%8E%E4%B8%BB%E9%A1%B5%E5%88%86%E4%BA%AB/ ">精美主页分享</a></span>
+                    </div>
+                    <div class="content ">浏览器主页广告太多，壁纸特效全无，搜索引擎单一，将主页设置为以下站点即可解决这一系列问题：&gt;简法主页&gt;KIM主页&gt;蓝调网站&gt;偷渡鱼&gt;小呆导航 点击上方文字或复制链接到浏览器即可查看效果，复制到浏览器设置为主页即用简法主页1http:&#x2F;&#x2F;www.jianfast.com&#x2F; KIM主页1https:&#x2F;&#x2F;kim.plopco.com&#x2F; 蓝调网站1http:&#x2F;&#x2F;lcoc.top&#x2F;bizhi&#x2F;
+                        偷渡鱼1https:&#x2F;&#x2F;touduyu.com&#x2F; 小呆导航1https:&#x2F;&#x2F;www.webjike.com&#x2F;index.html More info: shenshenbuxi 文章中出现的商标及图像版权属于其合法持有人，只供传递信息之用，非商务用途。互动交流时请遵守理性，宽容，换位思考的原则。
+                    </div>
+                </div>
+            </div>
+            <div class="recent-post-item ">
+                <div class="post_cover left_radius ">
+                    <a href="/2020/10/06/shejitupian/ " title="找图片，搞设计，来这找素材！ "> <img class="post_bg " src="https://s1.ax1x.com/2020/10/09/0rj20P.jpg " onerror="this.onerror=null;this.src='/img/404.jpg' " alt="找图片，搞设计，来这找素材！ "></a>
+                </div>
+                <div class="recent-post-info "><a class="article-title " href="/2020/10/06/shejitupian/ " title="找图片，搞设计，来这找素材！ ">找图片，搞设计，来这找素材！</a>
+                    <div class="article-meta-wrap "><span class="post-meta-date "><i class="far fa-calendar-alt "></i><span class="article-meta-label ">发表于</span><time datetime="2020-10-06T04:12:57.000Z " title="发表于 2020-10-06 12:12:57
+        ">2020-10-06</time></span><span class="article-meta "><span class="article-meta__separator ">|</span>
+                        <i class="fas fa-inbox article-meta__icon "></i><a class="article-meta__categories " href="/categories/%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/ ">工具分享</a></span>
+                    </div>
+                    <div class="content ">极像素超高清大图&gt;高清图库&gt;高清图库&gt;高清图库&gt;找图片&gt;电脑壁纸&gt;电脑壁纸&gt;彼岸图网&gt;极像素超高清大图&gt;极像素超高清大图 音频，视频素材库&gt;免费音频素材&gt;新CG儿视频素材模板无水印+免费下载&gt;小图标下载&gt;第一字体转换器&gt;doyoudosh（平面设计&gt;企业宣传视频在线制作&gt;MAKE海报设计官网&gt;一键海报神器&gt;字由（字体设计&gt;查字体网站&gt;爱给网免费音效配乐3D视频游戏素材&gt;在线视频剪辑
+                        点击上方文字或复制链接到浏览器即可使用(图片素材)高清图库11http:&#x2F;&#x2F;lcoc.top&#x2F;bizhi&#x2F; 高清图库21https:&#x2F;&#x2F;unsplash.com&#x2F; 高清图库31https:&#x2F;&#x2F;pixabay.com&#x2F; 找图片1https:&#x2F;&#x2F;www.pexels.com&#x2F; 电脑壁纸1https:&#x2F;&#x2F;visualhunt.com&
+                        ...
+                    </div>
+                </div>
+            </div>
+            <div class="recent-post-item ">
+                <div class="post_cover right_radius ">
+                    <a href="/2020/10/06/shipinzhan/ " title="全网视频看这里！！！ "> <img class="post_bg " src="https://s1.ax1x.com/2020/10/09/0rj6OI.jpg " onerror="this.onerror=null;this.src='/img/404.jpg' " alt="全网视频看这里！！！ "></a>
+                </div>
+                <div class="recent-post-info "><a class="article-title " href="/2020/10/06/shipinzhan/ " title="全网视频看这里！！！ ">全网视频看这里！！！</a>
+                    <div class="article-meta-wrap "><span class="post-meta-date "><i class="far fa-calendar-alt "></i><span class="article-meta-label ">发表于</span><time datetime="2020-10-06T04:12:57.000Z " title="发表于 2020-10-06 12:12:57
+        ">2020-10-06</time></span><span class="article-meta "><span class="article-meta__separator ">|</span>
+                        <i class="fas fa-inbox article-meta__icon "></i><a class="article-meta__categories " href="/categories/%E9%9F%B3%E8%A7%86%E9%A2%91%E8%B5%84%E6%BA%90/ ">音视频资源</a></span>
+                    </div>
+                    <div class="content ">全网资源免费享，和充值说拜拜！在线看剧真不卡影视去看TV动漫视频网94神马电影网NO视频官网蓝光画质电影牛牛TVVideoFk解析视频蓝调网站 点击上方文字或复制链接到浏览器即可使用麻辣黑科技影视1http:&#x2F;&#x2F;dy.27234.cn&#x2F; 真不卡影视1http:&#x2F;&#x2F;www.zhenbuka.com&#x2F; 去看TV1https:&#x2F;&#x2F;www.qukantv.net&#x2F; 动漫视频网1http:&#x2F;&#x2F;www.zzzfun.com&#x2F;
+                        94神马电影网1http:&#x2F;&#x2F;www.9rmb.com&#x2F; NO视频官网1http:&#x2F;&#x2F;www.novipnoad.com&#x2F; 蓝光画质电影1http:&#x2F;&#x2F;www.languang.co&#x2F; 牛牛TV1http:&#x2F;&#x2F;www.ziliao6.com&#x2F;tv&#x2F; VideoFk解析视频1http:&#x2F;&#x ...</div>
+                </div>
+            </div>
+            <div class="recent-post-item ">
+                <div class="post_cover left_radius ">
+                    <a href="/2020/10/06/wendangchuli/ " title="文档处理全搞定！！！ "> <img class="post_bg " src="https://s1.ax1x.com/2020/10/09/0rj0YD.jpg " onerror="this.onerror=null;this.src='/img/404.jpg' " alt="文档处理全搞定！！！ "></a>
+                </div>
+                <div class="recent-post-info "><a class="article-title " href="/2020/10/06/wendangchuli/ " title="文档处理全搞定！！！ ">文档处理全搞定！！！</a>
+                    <div class="article-meta-wrap "><span class="post-meta-date "><i class="far fa-calendar-alt "></i><span class="article-meta-label ">发表于</span><time datetime="2020-10-06T04:12:57.000Z " title="发表于 2020-10-06 12:12:57
+        ">2020-10-06</time></span><span class="article-meta "><span class="article-meta__separator ">|</span>
+                        <i class="fas fa-inbox article-meta__icon "></i><a class="article-meta__categories " href="/categories/%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/ ">工具分享</a></span>
+                    </div>
+                    <div class="content ">文档格式变换，PDF处理……office,wps无法处理的文件，来这全解决&gt;PDF处理1&gt;PDF处理2&gt;PDF处理3&gt;PDF处理4&gt;即书在线制作PPT&gt;腾讯文档在线协作编辑和管理文档&gt;ProcessOn在线协作制作结构图&gt;iLovePDF在线转换PDF利器&gt;PPT在线制作&gt;PDF24工具pdf处理工具&gt;IMGBOT在线图片处理&gt;福昕云编辑在线编辑PDF&gt;TinyPNG在线压缩图片&gt;在线使用各种大应用，在线使用CAD，MATLAB&gt;Office三件套&gt;优品PPT模板下载&gt;第一PPT模板下载&gt;三顿PPT导航
+                        点击上方文字或复制链接到浏览器即可使用PDF处理11https:&#x2F;&#x2F;smallpdf.com&#x2F;cn PDF处理21https:&#x2F;&#x2F;www.ilovepdf.com&#x2F;zh-cn PDF处理31https:&#x2F;&#x2F;www.pdfpai.com&#x2F; PDF处理41https:&#x2F;&#x2 ...</div>
+                </div>
+            </div>
+            <nav id="pagination ">
+                <div class="pagination "><span class="page-number current ">1</span></div>
+            </nav>
+        </div>
+        <div class="aside_content " id="aside_content ">
+            <div class="card-widget card-info ">
+                <div class="card-content ">
+                    <div class="card-info-avatar is-center "><img class="avatar-img " src="/img/avatar.png " onerror="this.onerror=null;this.src='/img/friend_404.gif' " alt="avatar " />
+                        <div class="author-info__name ">申申不嘻</div>
+                        <div class="author-info__description ">Keep Calm and Carry On</div>
+                    </div>
+                    <div class="card-info-data ">
+                        <div class="card-info-data-item is-center ">
+                            <a href="/archives/ ">
+                                <div class="headline ">文章</div>
+                                <div class="length_num ">5</div>
+                            </a>
+                        </div>
+                        <div class="card-info-data-item is-center ">
+                            <a href="/tags/ ">
+                                <div class="headline ">标签</div>
+                                <div class="length_num ">6</div>
+                            </a>
+                        </div>
+                        <div class="card-info-data-item is-center ">
+                            <a href="/categories/ ">
+                                <div class="headline ">分类</div>
+                                <div class="length_num ">4</div>
+                            </a>
+                        </div>
+                    </div><a class="button--animated " id="card-info-btn " href="https://shenshenbuxi.com/ "><i></i><span>永远年轻永远热泪盈眶!</span></a>
+                    <div class="card-info-social-icons is-center "><a class="social-icon " href="https://github.com/shenshenbuxi/shenshenbuxi.github.io/ " target="_blank " title="Github "><i class="fab fa-github "></i></a>
+                        <a class="social-icon " href="mailto:656629253@qq.com " target="_blank " title="Email "><i class="fas fa-envelope "></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="sticky_layout ">
+                <div class="card-widget card-announcement ">
+                    <div class="card-content ">
+                        <div class="item-headline "><i class="fas fa-bullhorn card-announcement-animation "></i><span>公告</span></div>
+                        <div class="announcement_content ">本站初成，诸多不足，还请指出，谢且改之！</div>
+                    </div>
+                </div>
+                <div class="card-widget card-recent-post ">
+                    <div class="card-content ">
+                        <div class="item-headline "><i class="fas fa-history "></i><span>最新文章</span></div>
+                        <div class="aside-list ">
+                            <div class="aside-list-item ">
+                                <a class="thumbnail " href="/2020/10/24/gongjuheji/ " title="上百款实用工具等你发现 "><img src="https://s1.ax1x.com/2020/10/10/0sINf1.jpg " onerror="this.onerror=null;this.src='/img/404.jpg' " alt="上百款实用工具等你发现 " /></a>
+                                <div class="content "><a class="title " href="/2020/10/24/gongjuheji/ " title="上百款实用工具等你发现 ">上百款实用工具等你发现</a><time datetime="2020-10-24T08:16:57.000Z " title="发表于 2020-10-24 16:16:57 ">2020-10-24</time></div>
+                            </div>
+                            <div class="aside-list-item ">
+                                <a class="thumbnail " href="/2020/10/24/liulanqizhuye/ " title="追求极简精美主页 "><img src="https://s1.ax1x.com/2020/10/10/0sI8w4.jpg " onerror="this.onerror=null;this.src='/img/404.jpg' " alt="追求极简精美主页 " /></a>
+                                <div class="content "><a class="title " href="/2020/10/24/liulanqizhuye/ " title="追求极简精美主页 ">追求极简精美主页</a><time datetime="2020-10-24T08:16:57.000Z " title="发表于 2020-10-24 16:16:57 ">2020-10-24</time></div>
+                            </div>
+                            <div class="aside-list-item ">
+                                <a class="thumbnail " href="/2020/10/06/shejitupian/ " title="找图片，搞设计，来这找素材！ "><img src="https://s1.ax1x.com/2020/10/09/0rj20P.jpg " onerror="this.onerror=null;this.src='/img/404.jpg' " alt="找图片，搞设计，来这找素材！ " /></a>
+                                <div class="content "><a class="title " href="/2020/10/06/shejitupian/ " title="找图片，搞设计，来这找素材！ ">找图片，搞设计，来这找素材！</a><time datetime="2020-10-06T04:12:57.000Z " title="发表于 2020-10-06 12:12:57 ">2020-10-06</time></div>
+                            </div>
+                            <div class="aside-list-item ">
+                                <a class="thumbnail " href="/2020/10/06/shipinzhan/ " title="全网视频看这里！！！ "><img src="https://s1.ax1x.com/2020/10/09/0rj6OI.jpg " onerror="this.onerror=null;this.src='/img/404.jpg' " alt="全网视频看这里！！！ " /></a>
+                                <div class="content "><a class="title " href="/2020/10/06/shipinzhan/ " title="全网视频看这里！！！ ">全网视频看这里！！！</a><time datetime="2020-10-06T04:12:57.000Z " title="发表于 2020-10-06 12:12:57 ">2020-10-06</time></div>
+                            </div>
+                            <div class="aside-list-item ">
+                                <a class="thumbnail " href="/2020/10/06/wendangchuli/ " title="文档处理全搞定！！！ "><img src="https://s1.ax1x.com/2020/10/09/0rj0YD.jpg " onerror="this.onerror=null;this.src='/img/404.jpg' " alt="文档处理全搞定！！！ " /></a>
+                                <div class="content "><a class="title " href="/2020/10/06/wendangchuli/ " title="文档处理全搞定！！！ ">文档处理全搞定！！！</a><time datetime="2020-10-06T04:12:57.000Z " title="发表于 2020-10-06 12:12:57 ">2020-10-06</time></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-widget card-categories ">
+                    <div class="card-content ">
+                        <div class="item-headline "><i class="fas fa-folder-open "></i><span>分类</span></div>
+                        <ul class="card-category-list " id="aside-cat-list ">
+                            <li class="card-category-list-item "><a class="card-category-list-link " href="/categories/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/ "><span class="card-category-list-name ">实用工具</span><span class="card-category-list-count ">1</span></a></li>
+                            <li class="card-category-list-item "><a class="card-category-list-link " href="/categories/%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/ "><span class="card-category-list-name ">工具分享</span><span class="card-category-list-count ">2</span></a></li>
+                            <li class="card-category-list-item "><a class="card-category-list-link " href="/categories/%E7%B2%BE%E7%BE%8E%E4%B8%BB%E9%A1%B5%E5%88%86%E4%BA%AB/ "><span class="card-category-list-name ">精美主页分享</span><span class="card-category-list-count ">1</span></a></li>
+                            <li class="card-category-list-item "><a class="card-category-list-link " href="/categories/%E9%9F%B3%E8%A7%86%E9%A2%91%E8%B5%84%E6%BA%90/ "><span class="card-category-list-name ">音视频资源</span><span class="card-category-list-count ">1</span></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-widget card-tags ">
+                    <div class="card-content ">
+                        <div class="item-headline "><i class="fas fa-tags "></i><span>标签</span></div>
+                        <div class="card-tag-cloud "><a href="/tags/%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7/ " style="font-size: 1.1em; color: rgb(122, 131, 89) ">在线工具</a><a href="/tags/%E5%8D%B3%E7%82%B9%E5%8D%B3%E7%94%A8/ " style="font-size: 1.5em; color:
+        rgb(190, 129, 56) ">即点即用</a>
+                            <a href="/tags/%E7%B2%BE%E7%BE%8E%E4%B8%BB%E9%A1%B5/ " style="font-size: 1.1em; color: rgb(149, 12, 100) ">精美主页</a><a href="/tags/%E9%9F%B3%E8%A7%86%E9%A2%91%E7%B4%A0%E6%9D%90/ " style="font-size: 1.1em; color: rgb(48, 197,
+        130) ">音视频素材</a>
+                            <a
+                                href="/tags/%E5%9B%BE%E7%89%87%E5%A3%81%E7%BA%B8%E5%A4%A7%E5%85%A8/ " style="font-size: 1.1em; color: rgb(34, 17, 75) ">图片壁纸大全</a>
+                                <a href="/tags/%E5%85%A8%E7%BD%91%E9%9F%B3%E8%A7%86%E9%A2%91%E8%B5%84%E6%BA%90/ " style="font-size: 1.1em; color: rgb(32, 182, 147) ">全网音视频资源</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-widget card-webinfo ">
+                    <div class="card-content ">
+                        <div class="item-headline "><i class="fas fa-chart-line "></i><span>网站资讯</span></div>
+                        <div class="webinfo ">
+                            <div class="webinfo-item ">
+                                <div class="item-name ">文章数目 :</div>
+                                <div class="item-count ">5</div>
+                            </div>
+                            <div class="webinfo-item ">
+                                <div class="item-name ">已运行时间 :</div>
+                                <div class="item-count " id="runtimeshow " data-publishDate="2020-09-30T16:00:00.000Z "></div>
+                            </div>
+                            <div class="webinfo-item ">
+                                <div class="item-name ">本站访客数 :</div>
+                                <div class="item-count " id="busuanzi_value_site_uv "></div>
+                            </div>
+                            <div class="webinfo-item ">
+                                <div class="item-name ">本站总访问量 :</div>
+                                <div class="item-count " id="busuanzi_value_site_pv "></div>
+                            </div>
+                            <div class="webinfo-item ">
+                                <div class="item-name ">最后更新时间 :</div>
+                                <div class="item-count " id="last-push-date " data-lastPushDate="2020-11-01T13:27:43.748Z "></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer " style="background-image: url(https://s1.ax1x.com/2020/10/10/0sIQyT.jpg) ">
+        <div id="footer-wrap ">
+            <div class="copyright ">&copy;2020 By 申申不嘻</div>
+            <div class="footer_custom_text "><a href="https://shenshenbuxi.com/ ">申申不嘻，历久弥新</a></div>
+            <div class="icp ">
+                <a><img class="icp-icon " src="/img/icp.png " /><span>中央许可免备案</span></a>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <section id="rightside ">
+        <div id="rightside-config-hide "><button id="darkmode " type="button " title="浅色和深色模式转换 "><i class="fas fa-adjust "></i></button></div>
+        <div id="rightside-config-show "><button id="rightside_config " type="button " title="设置 "><i class="fas fa-cog "></i></button><button id="chat_btn " type="button " title="rightside.chat_btn "><i class="fas fa-sms "></i></button><button id="go-up
+        " type="button " title="回到顶部 "><i class="fas fa-arrow-up "></i></button></div>
+    </section>
+    <div>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js "></script>
+        <script src="/js/utils.js "></script>
+        <script src="/js/main.js "></script>
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js "></script>
+        <script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js "></script>
+        <div class="js-pjax ">
+            <script>
+                function subtitleType() {
+                    if (true) {
+                        var typed = new Typed("#subtitle ", {
+                            strings: "永远相信美好的事情即将发生,Always believe that good things are about to happen ".split(", "),
+                            startDelay: 300,
+                            typeSpeed: 150,
+                            loop: true,
+                            backSpeed: 50
+                        })
+                    } else {
+                        document.getElementById("subtitle ").innerHTML = '阳光聚散，我们不多说'
+                    }
+                }
+
+                if (true) {
+                    if (typeof Typed === 'function') subtitleType()
+                    else $.getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js', subtitleType)
+                } else {
+                    subtitleType()
+                }
+            </script>
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js "></script>
+        </div>
+        <script id="canvas_nest " defer="defer " color="0,0,255 " opacity="0.7 " zIndex="-1 " count="99 " mobile="true " src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js "></script>
+        <script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js "></script>
+        <script>
+            POWERMODE.colorful = true;
+            POWERMODE.shake = false;
+            POWERMODE.mobile = false;
+            document.body.addEventListener('input', POWERMODE);
+        </script>
+        <script id="click-show-text " src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js " async="async " mobile="false "></script>
+        <script>
+            (function(i, s, o, g, r, a, m) {
+                i["DaoVoiceObject "] = r;
+                i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                a.charset = "utf-8 ";
+                m.parentNode.insertBefore(a, m)
+            })(window, document, "script ", ('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/dc432b63.js ", "daovoice ")
+        </script>
+        <script>
+            var isChatBtn = true
+            daovoice('init', {
+                app_id: 'dc432b63',
+            }, {
+                launcher: {
+                    disableLauncherIcon: isChatBtn // 悬浮 ICON 是否显示
+                },
+            });
+            daovoice('update');
+
+            if (isChatBtn) {
+                var chatBtnFn = () => {
+                    var chatBtn = document.getElementById("chat_btn ")
+                    chatBtn.addEventListener("click ", function() {
+                        daovoice('show')
+                    });
+                }
+                chatBtnFn()
+            } else {
+                if (true) {
+                    function chatBtnHide() {
+                        daovoice('update', {}, {
+                            launcher: {
+                                disableLauncherIcon: true // 悬浮 ICON 是否显示
+                            },
+                        });
+                    }
+
+                    function chatBtnShow() {
+                        daovoice('update', {}, {
+                            launcher: {
+                                disableLauncherIcon: false // 悬浮 ICON 是否显示
+                            },
+                        });
+                    }
+                }
+            }
+        </script>
+        <script>
+            (function() {
+                const bp = document.createElement('script');
+                const curProtocol = window.location.protocol.split(':')[0];
+                if (curProtocol === 'https') {
+                    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                } else {
+                    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                }
+                bp.dataset.pjax = ''
+                const s = document.getElementsByTagName("script ")[0];
+                s.parentNode.insertBefore(bp, s);
+            })()
+        </script>
+    </div>
+</body>
+
+</html>
